@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Score Counter</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eaf5ea;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 400px;
+            margin: auto;
+            box-shadow: 0 4px 10px #ccc;
+        }
+
+        h1 {
+            color: green;
+        }
+
+        #score {
+            font-size: 50px;
+            font-weight: bold;
+            margin: 20px;
+            color: #222;
+        }
+
+        button {
+            font-size: 25px;
+            padding: 15px 25px;
+            margin: 10px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background-color: green;
+            color: white;
+        }
+
+        button:hover {
+            background-color: darkgreen;
+        }
+
+        .reset {
+            background-color: red;
+        }
+
+        .reset:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>🏏 Cricket Score Counter</h1>
+
+        <div id="score">0</div>
+
+        <button onclick="addRuns(1)">1</button>
+        <button onclick="addRuns(4)">4</button>
+        <button onclick="addRuns(6)">6</button>
+
+        <br>
+
+        <button class="reset" onclick="resetScore()">Reset</button>
+    </div>
+
+    <script>
+        let score = 0;
+
+        function addRuns(runs) {
+            score = score + runs;
+            document.getElementById("score").innerHTML = score;
+        }
+
+        function resetScore() {
+            score = 0;
+            document.getElementById("score").innerHTML = score;
+        }
+    </script>
+
+</body>
+</html>
